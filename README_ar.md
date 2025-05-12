@@ -9,7 +9,6 @@
   <a href="./README_ar.md">العربيه</a> |
 </p>
 
-
 <details open>
 <summary><b>📕 Table of Contents</b></summary>
 
@@ -32,10 +31,7 @@
 
 ## 💡 What is RAGFlow?
 
-[RAGFlow](https://ragflow.io/) is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document
-understanding. It offers a streamlined RAG workflow for businesses of any scale, combining LLM (Large Language Models)
-to provide truthful question-answering capabilities, backed by well-founded citations from various complex formatted
-data.
+[RAGFlow](https://ragflow.io/) هو محرك RAG (استرجاع معزز) مفتوح المصدر، يعتمد على فهم متعمق للمستندات. يوفر سير عمل RAG مبسطًا للشركات من جميع الأحجام، ويجمع بين نماذج اللغة الكبيرة (LLM) لتوفير إمكانيات إجابة دقيقة على الأسئلة، مدعومة باستشهادات موثوقة من بيانات متنوعة بتنسيقات معقدة.
 
 ## 🎮 Demo
 
@@ -48,17 +44,16 @@ Try our demo at [https://demo.ragflow.io](https://demo.ragflow.io).
 
 ## 🔥 Latest Updates
 
-- 2025-03-19 Supports using a multi-modal model to make sense of images within PDF or DOCX files.
-- 2025-02-28 Combined with Internet search (Tavily), supports reasoning like Deep Research for any LLMs.
-- 2025-01-26 Optimizes knowledge graph extraction and application, offering various configuration options.
-- 2024-12-18 Upgrades Document Layout Analysis model in DeepDoc.
-- 2024-11-01 Adds keyword extraction and related question generation to the parsed chunks to improve the accuracy of retrieval.
-- 2024-08-22 Support text to SQL statements through RAG.
+- ١٩ مارس ٢٠٢٥ يدعم استخدام نموذج متعدد الوسائط لفهم الصور داخل ملفات PDF أو DOCX.
+- ٢٨ فبراير ٢٠٢٥، يدعم البحث على الإنترنت (Tavily) التفكير المنطقي مثل البحث العميق لأي طالب ماجستير في القانون.
+- ٢٦ يناير ٢٠٢٥، يُحسّن استخراج وتطبيق الرسم البياني المعرفي، مع توفير خيارات تكوين متنوعة.
+- ١٨ ديسمبر ٢٠٢٤، يُحسّن نموذج تحليل تخطيط المستندات في DeepDoc.
+- ٠١ نوفمبر ٢٠٢٤، يُضيف استخراج الكلمات المفتاحية وتوليد الأسئلة ذات الصلة إلى الأجزاء المُحللة لتحسين دقة الاسترجاع.
+- ٢٢ أغسطس ٢٠٢٤، يدعم تحويل النص إلى عبارات SQL من خلال RAG.
 
 ## 🎉 Stay Tuned
 
-⭐️ Star our repository to stay up-to-date with exciting new features and improvements! Get instant notifications for new
-releases! 🌟
+⭐️ سجّل في مستودعنا لتبقى على اطلاع دائم بالميزات والتحسينات الجديدة والمثيرة! احصل على إشعارات فورية بالإصدارات الجديدة! 🌟
 
 <div align="center" style="margin-top:20px;margin-bottom:20px;">
 <img src="https://github.com/user-attachments/assets/18c9707e-b8aa-4caf-a154-037089c105ba" width="1200"/>
@@ -74,13 +69,11 @@ releases! 🌟
 
 ### 🍱 **Template-based chunking**
 
-- Intelligent and explainable.
-- Plenty of template options to choose from.
+- ذكي وسهل الشرح. - خيارات قوالب متعددة للاختيار من بينها.
 
 ### 🌱 **Grounded citations with reduced hallucinations**
 
-- Visualization of text chunking to allow human intervention.
-- Quick view of the key references and traceable citations to support grounded answers.
+- تصور تقسيم النص للسماح بالتدخل البشري. - عرض سريع للمراجع الرئيسية والاقتباسات القابلة للتتبع لدعم الإجابات المبنية على الأدلة.
 
 ### 🍔 **Compatibility with heterogeneous data sources**
 
@@ -172,19 +165,12 @@ $ docker compose -f docker-compose.yml up -d
 
    _The following output confirms a successful launch of the system:_
 
-   ```bash
-
-         ____   ___    ______ ______ __
-        / __ \ /   |  / ____// ____// /____  _      __
-       / /_/ // /| | / / __ / /_   / // __ \| | /| / /
-      / _, _// ___ |/ /_/ // __/  / // /_/ /| |/ |/ /
-     /_/ |_|/_/  |_|\____//_/    /_/ \____/ |__/|__/
-
-    * Running on all addresses (0.0.0.0)
    ```
 
    > If you skip this confirmation step and directly log in to RAGFlow, your browser may prompt a `network anormal`
    > error because, at that moment, your RAGFlow may not be fully initialized.
+
+   ```
 
 5. In your web browser, enter the IP address of your server and log in to RAGFlow.
    > With the default settings, you only need to enter `http://IP_OF_YOUR_MACHINE` (**sans** port number) as the default

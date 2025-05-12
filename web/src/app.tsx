@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { App, ConfigProvider, ConfigProviderProps, theme } from 'antd';
 
+import arEG from 'antd/locale/ar_EG';
 import enUS from 'antd/locale/en_US';
-import arSA from 'antd/locale/ar';
 import dayjs from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
@@ -29,8 +29,7 @@ dayjs.extend(weekYear);
 
 const AntLanguageMap = {
   en: enUS,
-  ar: arSA,
-
+  ar: arEG,
 };
 
 const queryClient = new QueryClient();
