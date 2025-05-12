@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo-with-text.png" width="520" alt="ragflow logo">
+<img src="web/src/assets/logo.png" width="520" alt="ragflow logo">
 </a>
 </div>
 
@@ -149,23 +149,23 @@
 > 모든 Docker 이미지는 x86 플랫폼을 위해 빌드되었습니다. 우리는 현재 ARM64 플랫폼을 위한 Docker 이미지를 제공하지 않습니다.
 > ARM64 플랫폼을 사용 중이라면, [시스템과 호환되는 Docker 이미지를 빌드하려면 이 가이드를 사용해 주세요](https://ragflow.io/docs/dev/build_docker_image).
 
-   > 아래 명령어는 RAGFlow Docker 이미지의 v0.18.0-slim 버전을 다운로드합니다. 다양한 RAGFlow 버전에 대한 설명은 다음 표를 참조하십시오. v0.18.0-slim과 다른 RAGFlow 버전을 다운로드하려면, docker/.env 파일에서 RAGFLOW_IMAGE 변수를 적절히 업데이트한 후 docker compose를 사용하여 서버를 시작하십시오. 예를 들어, 전체 버전인 v0.18.0을 다운로드하려면 RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0로 설정합니다.
+> 아래 명령어는 RAGFlow Docker 이미지의 v0.18.0-slim 버전을 다운로드합니다. 다양한 RAGFlow 버전에 대한 설명은 다음 표를 참조하십시오. v0.18.0-slim과 다른 RAGFlow 버전을 다운로드하려면, docker/.env 파일에서 RAGFLOW_IMAGE 변수를 적절히 업데이트한 후 docker compose를 사용하여 서버를 시작하십시오. 예를 들어, 전체 버전인 v0.18.0을 다운로드하려면 RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0로 설정합니다.
 
-   ```bash
-   $ cd ragflow/docker
-   # Use CPU for embedding and DeepDoc tasks:
-   $ docker compose -f docker-compose.yml up -d
+```bash
+$ cd ragflow/docker
+# Use CPU for embedding and DeepDoc tasks:
+$ docker compose -f docker-compose.yml up -d
 
-   # To use GPU to accelerate embedding and DeepDoc tasks:
-   # docker compose -f docker-compose-gpu.yml up -d
-   ```
+# To use GPU to accelerate embedding and DeepDoc tasks:
+# docker compose -f docker-compose-gpu.yml up -d
+```
 
-   | RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
-   | ----------------- | --------------- | --------------------- | ------------------------ |
-   | v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
-   | v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
-   | nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
-   | nightly-slim      | &approx;2       | ❌                     | _Unstable_ nightly build |
+| RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
+| ----------------- | --------------- | --------------------- | ------------------------ |
+| v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
+| v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
+| nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
+| nightly-slim      | &approx;2       | ❌                    | _Unstable_ nightly build |
 
 1. 서버가 시작된 후 서버 상태를 확인하세요:
 

@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo-with-text.png" width="520" alt="Logo ragflow">
+<img src="web/src/assets/logo.png" width="520" alt="Logo ragflow">
 </a>
 </div>
 

@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo-with-text.png" width="350" alt="ragflow logo">
+<img src="web/src/assets/logo.png" width="350" alt="ragflow logo">
 </a>
 </div>
 
@@ -55,7 +55,7 @@
 
 ## 🔥 近期更新
 
-- 2025-03-19 PDF和DOCX中的图支持用多模态大模型去解析得到描述.
+- 2025-03-19 PDF 和 DOCX 中的图支持用多模态大模型去解析得到描述.
 - 2025-02-28 结合互联网搜索（Tavily），对于任意大模型实现类似 Deep Research 的推理功能.
 - 2025-01-26 优化知识图谱的提取和应用，提供了多种配置选择。
 - 2024-12-18 升级了 DeepDoc 的文档布局分析模型。
@@ -149,29 +149,29 @@
 > 请注意，目前官方提供的所有 Docker 镜像均基于 x86 架构构建，并不提供基于 ARM64 的 Docker 镜像。
 > 如果你的操作系统是 ARM64 架构，请参考[这篇文档](https://ragflow.io/docs/dev/build_docker_image)自行构建 Docker 镜像。
 
-   > 运行以下命令会自动下载 RAGFlow slim Docker 镜像 `v0.18.0-slim`。请参考下表查看不同 Docker 发行版的描述。如需下载不同于 `v0.18.0-slim` 的 Docker 镜像，请在运行 `docker compose` 启动服务之前先更新 **docker/.env** 文件内的 `RAGFLOW_IMAGE` 变量。比如，你可以通过设置 `RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0` 来下载 RAGFlow 镜像的 `v0.18.0` 完整发行版。
+> 运行以下命令会自动下载 RAGFlow slim Docker 镜像 `v0.18.0-slim`。请参考下表查看不同 Docker 发行版的描述。如需下载不同于 `v0.18.0-slim` 的 Docker 镜像，请在运行 `docker compose` 启动服务之前先更新 **docker/.env** 文件内的 `RAGFLOW_IMAGE` 变量。比如，你可以通过设置 `RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0` 来下载 RAGFlow 镜像的 `v0.18.0` 完整发行版。
 
-   ```bash
-   $ cd ragflow/docker
-   # Use CPU for embedding and DeepDoc tasks:
-   $ docker compose -f docker-compose.yml up -d
+```bash
+$ cd ragflow/docker
+# Use CPU for embedding and DeepDoc tasks:
+$ docker compose -f docker-compose.yml up -d
 
-   # To use GPU to accelerate embedding and DeepDoc tasks:
-   # docker compose -f docker-compose-gpu.yml up -d
-   ```
+# To use GPU to accelerate embedding and DeepDoc tasks:
+# docker compose -f docker-compose-gpu.yml up -d
+```
 
-   | RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
-   | ----------------- | --------------- | --------------------- | ------------------------ |
-   | v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
-   | v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
-   | nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
-   | nightly-slim      | &approx;2       | ❌                     | _Unstable_ nightly build |
+| RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
+| ----------------- | --------------- | --------------------- | ------------------------ |
+| v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
+| v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
+| nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
+| nightly-slim      | &approx;2       | ❌                    | _Unstable_ nightly build |
 
-   > [!TIP]
-   > 如果你遇到 Docker 镜像拉不下来的问题，可以在 **docker/.env** 文件内根据变量 `RAGFLOW_IMAGE` 的注释提示选择华为云或者阿里云的相应镜像。
-   >
-   > - 华为云镜像名：`swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow`
-   > - 阿里云镜像名：`registry.cn-hangzhou.aliyuncs.com/infiniflow/ragflow`
+> [!TIP]
+> 如果你遇到 Docker 镜像拉不下来的问题，可以在 **docker/.env** 文件内根据变量 `RAGFLOW_IMAGE` 的注释提示选择华为云或者阿里云的相应镜像。
+>
+> - 华为云镜像名：`swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow`
+> - 阿里云镜像名：`registry.cn-hangzhou.aliyuncs.com/infiniflow/ragflow`
 
 4. 服务器启动成功后再次确认服务器状态：
 
@@ -232,6 +232,7 @@ RAGFlow 默认使用 Elasticsearch 存储文本和向量数据. 如果要切换�
    ```bash
    $ docker compose -f docker/docker-compose.yml down -v
    ```
+
    Note: `-v` 将会删除 docker 容器的 volumes，已有的数据会被清空。
 
 2. 设置 **docker/.env** 目录中的 `DOC_ENGINE` 为 `infinity`.
@@ -295,6 +296,7 @@ docker build --platform linux/amd64 --build-arg NEED_MIRROR=1 -f Dockerfile -t i
    ```
    127.0.0.1       es01 infinity mysql minio redis
    ```
+
 4. 如果无法访问 HuggingFace，可以把环境变量 `HF_ENDPOINT` 设成相应的镜像站点：
 
    ```bash
@@ -323,6 +325,7 @@ docker build --platform linux/amd64 --build-arg NEED_MIRROR=1 -f Dockerfile -t i
    _以下界面说明系统已经成功启动：_
 
    ![](https://github.com/user-attachments/assets/0daf462c-a24d-4496-a66f-92533534e187)
+
 8. 开发完成后停止 RAGFlow 服务
    停止 RAGFlow 前端和后端服务：
    ```bash

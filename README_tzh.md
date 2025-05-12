@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo-with-text.png" width="350" alt="ragflow logo">
+<img src="web/src/assets/logo.png" width="350" alt="ragflow logo">
 </a>
 </div>
 
@@ -54,7 +54,7 @@
 
 ## 🔥 近期更新
 
-- 2025-03-19 PDF和DOCX中的圖支持用多模態大模型去解析得到描述.
+- 2025-03-19 PDF 和 DOCX 中的圖支持用多模態大模型去解析得到描述.
 - 2025-02-28 結合網路搜尋（Tavily），對於任意大模型實現類似 Deep Research 的推理功能.
 - 2025-01-26 最佳化知識圖譜的擷取與應用，提供了多種配置選擇。
 - 2024-12-18 升級了 DeepDoc 的文檔佈局分析模型。
@@ -148,29 +148,29 @@
 > 所有 Docker 映像檔都是為 x86 平台建置的。目前，我們不提供 ARM64 平台的 Docker 映像檔。
 > 如果您使用的是 ARM64 平台，請使用 [這份指南](https://ragflow.io/docs/dev/build_docker_image) 來建置適合您系統的 Docker 映像檔。
 
-   > 執行以下指令會自動下載 RAGFlow slim Docker 映像 `v0.18.0-slim`。請參考下表查看不同 Docker 發行版的說明。如需下載不同於 `v0.18.0-slim` 的 Docker 映像，請在執行 `docker compose` 啟動服務之前先更新 **docker/.env** 檔案內的 `RAGFLOW_IMAGE` 變數。例如，你可以透過設定 `RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0` 來下載 RAGFlow 鏡像的 `v0.18.0` 完整發行版。
+> 執行以下指令會自動下載 RAGFlow slim Docker 映像 `v0.18.0-slim`。請參考下表查看不同 Docker 發行版的說明。如需下載不同於 `v0.18.0-slim` 的 Docker 映像，請在執行 `docker compose` 啟動服務之前先更新 **docker/.env** 檔案內的 `RAGFLOW_IMAGE` 變數。例如，你可以透過設定 `RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0` 來下載 RAGFlow 鏡像的 `v0.18.0` 完整發行版。
 
-   ```bash
-   $ cd ragflow/docker
-   # Use CPU for embedding and DeepDoc tasks:
-   $ docker compose -f docker-compose.yml up -d
+```bash
+$ cd ragflow/docker
+# Use CPU for embedding and DeepDoc tasks:
+$ docker compose -f docker-compose.yml up -d
 
-   # To use GPU to accelerate embedding and DeepDoc tasks:
-   # docker compose -f docker-compose-gpu.yml up -d
-   ```
+# To use GPU to accelerate embedding and DeepDoc tasks:
+# docker compose -f docker-compose-gpu.yml up -d
+```
 
-   | RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
-   | ----------------- | --------------- | --------------------- | ------------------------ |
-   | v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
-   | v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
-   | nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
-   | nightly-slim      | &approx;2       | ❌                     | _Unstable_ nightly build |
+| RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
+| ----------------- | --------------- | --------------------- | ------------------------ |
+| v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
+| v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
+| nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
+| nightly-slim      | &approx;2       | ❌                    | _Unstable_ nightly build |
 
-   > [!TIP]
-   > 如果你遇到 Docker 映像檔拉不下來的問題，可以在 **docker/.env** 檔案內根據變數 `RAGFLOW_IMAGE` 的註解提示選擇華為雲或阿里雲的對應映像。
-   >
-   > - 華為雲鏡像名：`swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow`
-   > - 阿里雲鏡像名：`registry.cn-hangzhou.aliyuncs.com/infiniflow/ragflow`
+> [!TIP]
+> 如果你遇到 Docker 映像檔拉不下來的問題，可以在 **docker/.env** 檔案內根據變數 `RAGFLOW_IMAGE` 的註解提示選擇華為雲或阿里雲的對應映像。
+>
+> - 華為雲鏡像名：`swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow`
+> - 阿里雲鏡像名：`registry.cn-hangzhou.aliyuncs.com/infiniflow/ragflow`
 
 4. 伺服器啟動成功後再次確認伺服器狀態：
 
@@ -231,6 +231,7 @@ RAGFlow 預設使用 Elasticsearch 儲存文字和向量資料. 如果要切換�
    ```bash
    $ docker compose -f docker/docker-compose.yml down -v
    ```
+
    Note: `-v` 將會刪除 docker 容器的 volumes，已有的資料會被清空。
 
 2. 設定 **docker/.env** 目錄中的 `DOC_ENGINE` 為 `infinity`.

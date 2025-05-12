@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo-with-text.png" width="520" alt="ragflow logo">
+<img src="web/src/assets/logo.png" width="520" alt="ragflow logo">
 </a>
 </div>
 
@@ -176,23 +176,23 @@ releases! 🌟
 > All Docker images are built for x86 platforms. We don't currently offer Docker images for ARM64.
 > If you are on an ARM64 platform, follow [this guide](https://ragflow.io/docs/dev/build_docker_image) to build a Docker image compatible with your system.
 
-   > The command below downloads the `v0.18.0-slim` edition of the RAGFlow Docker image. See the following table for descriptions of different RAGFlow editions. To download a RAGFlow edition different from `v0.18.0-slim`, update the `RAGFLOW_IMAGE` variable accordingly in **docker/.env** before using `docker compose` to start the server. For example: set `RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0` for the full edition `v0.18.0`.
+> The command below downloads the `v0.18.0-slim` edition of the RAGFlow Docker image. See the following table for descriptions of different RAGFlow editions. To download a RAGFlow edition different from `v0.18.0-slim`, update the `RAGFLOW_IMAGE` variable accordingly in **docker/.env** before using `docker compose` to start the server. For example: set `RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0` for the full edition `v0.18.0`.
 
-   ```bash
-   $ cd ragflow/docker
-   # Use CPU for embedding and DeepDoc tasks:
-   $ docker compose -f docker-compose.yml up -d
+```bash
+$ cd ragflow/docker
+# Use CPU for embedding and DeepDoc tasks:
+$ docker compose -f docker-compose.yml up -d
 
-   # To use GPU to accelerate embedding and DeepDoc tasks:
-   # docker compose -f docker-compose-gpu.yml up -d
-   ```
+# To use GPU to accelerate embedding and DeepDoc tasks:
+# docker compose -f docker-compose-gpu.yml up -d
+```
 
-   | RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
-   |-------------------|-----------------|-----------------------|--------------------------|
-   | v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
-   | v0.18.0-slim      | &approx;2       | ❌                   | Stable release            |
-   | nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
-   | nightly-slim      | &approx;2       | ❌                   | _Unstable_ nightly build  |
+| RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
+| ----------------- | --------------- | --------------------- | ------------------------ |
+| v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
+| v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
+| nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
+| nightly-slim      | &approx;2       | ❌                    | _Unstable_ nightly build |
 
 4. Check the server status after having the server up and running:
 
@@ -257,8 +257,7 @@ RAGFlow uses Elasticsearch by default for storing full text and vectors. To swit
    $ docker compose -f docker/docker-compose.yml down -v
    ```
 
-> [!WARNING]
-> `-v` will delete the docker container volumes, and the existing data will be cleared.
+> [!WARNING] > `-v` will delete the docker container volumes, and the existing data will be cleared.
 
 2. Set `DOC_ENGINE` in **docker/.env** to `infinity`.
 

@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo-with-text.png" width="520" alt="ragflow logo">
+<img src="web/src/assets/logo.png" width="520" alt="ragflow logo">
 </a>
 </div>
 
@@ -244,7 +244,9 @@ O RAGFlow usa o Elasticsearch por padrão para armazenar texto completo e vetore
    ```bash
    $ docker compose -f docker/docker-compose.yml down -v
    ```
+
    Note: `-v` irá deletar os volumes do contêiner, e os dados existentes serão apagados.
+
 2. Defina `DOC_ENGINE` no **docker/.env** para `infinity`.
 
 3. Inicie os contêineres:

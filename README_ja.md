@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo-with-text.png" width="350" alt="ragflow logo">
+<img src="web/src/assets/logo.png" width="350" alt="ragflow logo">
 </a>
 </div>
 
@@ -55,7 +55,7 @@
 
 ## 🔥 最新情報
 
-- 2025-03-19 PDFまたはDOCXファイル内の画像を理解するために、多モーダルモデルを使用することをサポートします。
+- 2025-03-19 PDF または DOCX ファイル内の画像を理解するために、多モーダルモデルを使用することをサポートします。
 - 2025-02-28 インターネット検索 (TAVILY) と組み合わせて、あらゆる LLM の詳細な調査をサポートします。
 - 2025-01-26 ナレッジ グラフの抽出と適用を最適化し、さまざまな構成オプションを提供します。
 - 2024-12-18 DeepDoc のドキュメント レイアウト分析モデルをアップグレードします。
@@ -149,23 +149,23 @@
 > 現在、公式に提供されているすべての Docker イメージは x86 アーキテクチャ向けにビルドされており、ARM64 用の Docker イメージは提供されていません。
 > ARM64 アーキテクチャのオペレーティングシステムを使用している場合は、[このドキュメント](https://ragflow.io/docs/dev/build_docker_image)を参照して Docker イメージを自分でビルドしてください。
 
-   > 以下のコマンドは、RAGFlow Docker イメージの v0.18.0-slim エディションをダウンロードします。異なる RAGFlow エディションの説明については、以下の表を参照してください。v0.18.0-slim とは異なるエディションをダウンロードするには、docker/.env ファイルの RAGFLOW_IMAGE 変数を適宜更新し、docker compose を使用してサーバーを起動してください。例えば、完全版 v0.18.0 をダウンロードするには、RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0 と設定します。
+> 以下のコマンドは、RAGFlow Docker イメージの v0.18.0-slim エディションをダウンロードします。異なる RAGFlow エディションの説明については、以下の表を参照してください。v0.18.0-slim とは異なるエディションをダウンロードするには、docker/.env ファイルの RAGFLOW_IMAGE 変数を適宜更新し、docker compose を使用してサーバーを起動してください。例えば、完全版 v0.18.0 をダウンロードするには、RAGFLOW_IMAGE=infiniflow/ragflow:v0.18.0 と設定します。
 
-   ```bash
-   $ cd ragflow/docker
-   # Use CPU for embedding and DeepDoc tasks:
-   $ docker compose -f docker-compose.yml up -d
+```bash
+$ cd ragflow/docker
+# Use CPU for embedding and DeepDoc tasks:
+$ docker compose -f docker-compose.yml up -d
 
-   # To use GPU to accelerate embedding and DeepDoc tasks:
-   # docker compose -f docker-compose-gpu.yml up -d
-   ```
+# To use GPU to accelerate embedding and DeepDoc tasks:
+# docker compose -f docker-compose-gpu.yml up -d
+```
 
-   | RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
-   | ----------------- | --------------- | --------------------- | ------------------------ |
-   | v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
-   | v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
-   | nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
-   | nightly-slim      | &approx;2       | ❌                     | _Unstable_ nightly build |
+| RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
+| ----------------- | --------------- | --------------------- | ------------------------ |
+| v0.18.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
+| v0.18.0-slim      | &approx;2       | ❌                    | Stable release           |
+| nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
+| nightly-slim      | &approx;2       | ❌                    | _Unstable_ nightly build |
 
 1. サーバーを立ち上げた後、サーバーの状態を確認する:
 
