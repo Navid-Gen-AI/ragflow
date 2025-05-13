@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://demo.ragflow.io/">
-<img src="web/src/assets/logo.png" width="520" alt="ragflow logo">
+<img src="web/src/assets/logo-with-text.png" width="520" alt="ragflow logo">
 </a>
 </div>
 
@@ -8,7 +8,6 @@
   <a href="./README.md">English</a> |
   <a href="./README_ar.md">العربيه</a> |
 </p>
-
 
 <details open>
 <summary><b>📕 Table of Contents</b></summary>

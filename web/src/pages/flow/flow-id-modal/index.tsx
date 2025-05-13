@@ -24,7 +24,7 @@ const FlowIdModal = ({ hideModal }: IModalProps<any>) => {
         {id}
       </Paragraph>
       <Link
-        href="https://ragflow.io/docs/dev/http_api_reference#create-session-with-an-agent"
+        href="https://navid.sa/docs/dev/http_api_reference#create-session-with-an-agent"
         target="_blank"
       >
         {t('howUseId')}

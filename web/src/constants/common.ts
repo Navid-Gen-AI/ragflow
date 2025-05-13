@@ -39,28 +39,21 @@ export const fileIconMap = {
   xml: 'xml.svg',
 };
 
-export const LanguageList = [
-  'English',
-  'Arabic',
-
-];
+export const LanguageList = ['English', 'Arabic'];
 
 export const LanguageMap = {
   English: 'English',
   Arabic: 'Arabic',
-
 };
 
 export enum LanguageAbbreviation {
   En = 'en',
   Ar = 'ar',
-
 }
 
 export const LanguageAbbreviationMap = {
   [LanguageAbbreviation.En]: 'English',
   [LanguageAbbreviation.Ar]: 'arabic',
-
 };
 
 export const LanguageTranslationMap = {
@@ -91,7 +84,7 @@ export enum FileMimeType {
   Json = 'application/json',
 }
 
-export const Domain = 'demo.ragflow.io';
+export const Domain = 'demo.navid.sa';
 
 //#region file preview
 export const Images = [

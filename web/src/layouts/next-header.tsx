@@ -35,7 +35,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'umi';
 
 const handleDocHelpCLick = () => {
-  window.open('https://ragflow.io/docs/dev/category/guides', 'target');
+  window.open('https://navid.sa/docs/dev/category/guides', 'target');
 };
 
 export function Header() {
