@@ -23,7 +23,7 @@ const Circle = ({ children, ...restProps }: React.PropsWithChildren) => {
 };
 
 const handleGithubCLick = () => {
-  window.open('https://github.com/infiniflow/ragflow', 'target');
+  window.open('https://github.com/Navid-Gen-AI/', 'target');
 };
 
 const handleDocHelpCLick = () => {
