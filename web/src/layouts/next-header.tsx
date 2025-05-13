@@ -121,6 +121,7 @@ export function Header() {
       <div className="flex items-center gap-4">
         <img
           src={'/navidco_logo.jpg'}
+          height={40}
           alt="logo"
           className="size-10 mr-[12]"
           onClick={handleLogoClick}
