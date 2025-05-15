@@ -42,7 +42,7 @@ export default {
     login: {
       login: 'Sign in',
       signUp: 'Sign up',
-      loginDescription: 'We’re so excited to see you again!',
+      loginDescription: 'We’re so excited to see you again at NAVID!',
       registerDescription: 'Glad to have you on board!',
       emailLabel: 'Email',
       emailPlaceholder: 'Please input email',
@@ -58,7 +58,7 @@ export default {
       title:
         'Examine the Potential of Infrastructure,Connectivity,Intelligence and Performance with NAVID',
       description:
-        'Sign up for free to explore top RAG technology. Create knowledge bases and AIs to empower your business.',
+        'With NAVID, Create knowledge bases and AIs to empower your business.',
       review: 'from 500+ reviews',
     },
     header: {
@@ -75,7 +75,7 @@ export default {
       welcome: 'Welcome to',
     },
     knowledgeList: {
-      welcome: 'Welcome back',
+      welcome: 'Welcome back at NAVID',
       description: 'Which knowledge bases will you use today?',
       createKnowledgeBase: 'Create knowledge base',
       name: 'Name',
